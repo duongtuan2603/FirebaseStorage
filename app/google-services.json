@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "348144597775",
+    "project_id": "cloud-storage-5956e",
+    "storage_bucket": "cloud-storage-5956e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:348144597775:android:c875f8b2b04a60b0c09c7a",
+        "android_client_info": {
+          "package_name": "com.example.cloudstorage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "348144597775-0in11v5lr2n6ltocp0eq7pdieeg77gv8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cloudstorage",
+            "certificate_hash": "55d49cd588b497751797434cdd71287ecf03c3ff"
+          }
+        },
+        {
+          "client_id": "348144597775-qmrfr0q29feaok75jfijk6dfmrt89voe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsDGKUJNs1uLpvNqhBhKgn_OSfz8wsL90"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "348144597775-qmrfr0q29feaok75jfijk6dfmrt89voe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
