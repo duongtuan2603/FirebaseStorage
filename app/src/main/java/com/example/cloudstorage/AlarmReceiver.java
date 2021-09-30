@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Environment;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
@@ -49,26 +50,15 @@ public class AlarmReceiver extends BroadcastReceiver {
                 @RequiresApi(api = Build.VERSION_CODES.R)
                 @Override
                 public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    Log.d("Alarm Receiver", "start Deleting file: ");
+                    Log.d("Alarm Receiver", "Upload File Successfully");
                     File fileDelete = new File(filePath);
-                    fileDelete.delete();
-                    if (fileDelete.exists()){
-                        try {
-                            boolean deleted = fileDelete.getCanonicalFile().delete();
-                            if (deleted){
-                                Log.d(TAG, "deleted successfully");
-                            }
-                            else {
-                                context.deleteFile(fileDelete.getName());
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-
-
-                    }
-                    else{
-                        Log.d(TAG, "file deleted");
+                    Log.d("Alarm Receiver", "File to delete exist: " + fileDelete.exists());
+                    Log.d("Alarm Receiver", "start Deleting file: " + fileDelete.getPath());
+                    boolean deleted = fileDelete.getAbsoluteFile().delete();
+                    if (!deleted) {
+                        Log.d(TAG, "Can not delete, file still exist!");
+                    } else {
+                        Log.d(TAG, "Delete successfully");
                     }
                 }
             });
